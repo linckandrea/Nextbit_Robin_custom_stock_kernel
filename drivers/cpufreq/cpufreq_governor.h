@@ -215,7 +215,6 @@ struct zz_dbs_tuners {
 	unsigned int afs_threshold2;
 	unsigned int afs_threshold3;
 	unsigned int afs_threshold4;
->>>>>>> 5e0be59... cpufreq: add despair governor
 };
 
 /* Common Governor data across policies */
