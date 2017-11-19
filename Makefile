@@ -1,7 +1,7 @@
 VERSION = 3
 PATCHLEVEL = 10
 SUBLEVEL = 84
-EXTRAVERSION =
+EXTRAVERSION = -Pop-kernel_ether
 NAME = TOSSUG Baby Fish
 
 # *DOCUMENTATION*
@@ -374,10 +374,15 @@ LINUXINCLUDE    := \
 KBUILD_CPPFLAGS := -D__KERNEL__
 
 KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
+                   -fgraphite-identity -floop-nest-optimize -fivopts \
+                   -ftree-loop-distribution -ftree-loop-distribute-patterns -ftree-vectorize \
+                   -fmodulo-sched -fmodulo-sched-allow-regmoves \
 		   -fno-strict-aliasing -fno-common \
 		   -Werror-implicit-function-declaration \
 		   -Wno-format-security \
 		   -fno-delete-null-pointer-checks \
+                   -g0 -DNDEBUG \
+                   -fomit-frame-pointer 
 		   -std=gnu89
 
 # TheCrazyLex@PA Optimize for Cortex-A53+Cortex-A57 combo
