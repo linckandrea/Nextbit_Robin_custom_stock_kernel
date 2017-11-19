@@ -483,7 +483,7 @@ config TCP_CONG_CUBIC
 
 config TCP_CONG_WESTWOOD
 	tristate "TCP Westwood+"
-	default m
+	default y
 	---help---
 	TCP Westwood+ is a sender-side only modification of the TCP Reno
 	protocol stack that optimizes the performance of TCP congestion
@@ -518,7 +518,7 @@ config TCP_CONG_HSTCP
 
 config TCP_CONG_HYBLA
 	tristate "TCP-Hybla congestion control algorithm"
-	default n
+	default y
 	---help---
 	TCP-Hybla is a sender-side only change that eliminates penalization of
 	long-RTT, large-bandwidth connections, like when satellite legs are
@@ -527,7 +527,7 @@ config TCP_CONG_HYBLA
 
 config TCP_CONG_VEGAS
 	tristate "TCP Vegas"
-	default n
+	default y
 	---help---
 	TCP Vegas is a sender-side only change to TCP that anticipates
 	the onset of congestion by estimating the bandwidth. TCP Vegas
@@ -555,7 +555,7 @@ config TCP_CONG_LP
 
 config TCP_CONG_VENO
 	tristate "TCP Veno"
-	default n
+	default y
 	---help---
 	TCP Veno is a sender-side only enhancement of TCP to obtain better
 	throughput over wireless networks. TCP Veno makes use of state
